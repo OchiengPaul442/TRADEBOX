@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\appController;
+use App\Http\Controllers\AppController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,8 @@ use App\Http\Controllers\appController;
 |
 */
 
-// initial page
-Route::get('/', function () {
-    return view('layouts.index');
-});
+// initial pages
+ Route::get('/',[AppController::class,'Home'])->name('Home');
+
+
 

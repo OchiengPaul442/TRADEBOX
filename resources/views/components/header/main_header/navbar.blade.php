@@ -1,72 +1,49 @@
-<style>
-    .container {
-        display: inline-block;
-        cursor: pointer;
-    }
-
-    .bar1,
-    .bar2,
-    .bar3 {
-        width: 28px;
-        height: 3px;
-        background-color: #333;
-        margin: 6px 0;
-        transition: 0.4s;
-    }
-
-    /* Rotate first bar */
-    .change .bar1 {
-        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    /* Fade out the second bar */
-    .change .bar2 {
-        opacity: 0;
-    }
-
-    /* Rotate last bar */
-    .change .bar3 {
-        -webkit-transform: rotate(45deg) translate(-8px, -8px);
-        transform: rotate(45deg) translate(-6px, -8px);
-    }
-</style>
+{{-- header with navbar --}}
 <header>
-    <div class="flex justify-between w-full border-b-2 border-gray-300 p-3">
-        <div>
-            <p><span class="text-slate-400">Call Us </span>(234) 722333788</p>
+    {{-- contact section --}}
+    <div class="flex justify-between w-full p-3">
+        <div class="flex justify-between">
+            <div class="bg-slate-300" style="margin:2px 5px;width:2px;height: 17px;"></div>
+            <p class="text-slate-700"><span class="text-slate-400">Call Us </span>(234) 722333788</p>
+            <div class="bg-slate-300" style="margin:2px 7px;width:2px;height: 17px;"></div>
         </div>
         <div class="flex space-x-2">
-            <a href="#" data-tooltip-target="tooltip-bottom-1" data-tooltip-placement="bottom"><img style="width: 17px;"
-                    src="{{ asset('img/svg/twitter-svgrepo-com.svg') }}" alt="twitter"></a>
+            <div class="bg-slate-300" style="margin:1px 5px;width:2px;height: 17px;"></div>
+            <a href="#" data-tooltip-target="tooltip-bottom-1" data-tooltip-placement="bottom">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
             <div id="tooltip-bottom-1" role="tooltip"
                 class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Twitter
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
-            <a href="#" data-tooltip-target="tooltip-bottom-2" data-tooltip-placement="bottom"><img style="width: 17px;" src="{{ asset('img/svg/instagram-svgrepo-com.svg') }}"
-                    alt="instagram"></a>
+            <a href="#" data-tooltip-target="tooltip-bottom-2" data-tooltip-placement="bottom">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
             <div id="tooltip-bottom-2" role="tooltip"
                 class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Instagram
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
-            <a href="#" data-tooltip-target="tooltip-bottom-3" data-tooltip-placement="bottom"><img style="width: 17px;" src="{{ asset('img/svg/linkedin-logo-svgrepo-com.svg') }}"
-                    alt="linkedin"></a>
+            <a href="#" data-tooltip-target="tooltip-bottom-3" data-tooltip-placement="bottom">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
             <div id="tooltip-bottom-3" role="tooltip"
                 class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Linkedin
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
-            <a href="#" data-tooltip-target="tooltip-bottom-4" data-tooltip-placement="bottom"><img style="width: 17px;" src="{{ asset('img/svg/youtube-svgrepo-com.svg') }}"
-                    alt="youtube"></a>
+            <a href="#" data-tooltip-target="tooltip-bottom-4" data-tooltip-placement="bottom">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
             <div id="tooltip-bottom-4" role="tooltip"
                 class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Youtube
                 <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
-            <a href="#" data-tooltip-target="tooltip-bottom-5" data-tooltip-placement="bottom"><img style="width: 17px;" src="{{ asset('img/svg/facebook-svgrepo-com.svg') }}"
-                    alt="facebook"></a>
+            <a href="#" data-tooltip-target="tooltip-bottom-5" data-tooltip-placement="bottom">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
             <div id="tooltip-bottom-5" role="tooltip"
                 class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                 Facebook
@@ -74,7 +51,8 @@
             </div>
         </div>
     </div>
-
+    <hr>
+    {{-- navigation bar --}}
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
         <div class="flex flex-wrap justify-between items-center mx-auto p-2">
             <div>
@@ -93,8 +71,8 @@
             </div>
             <div class="flex items-center md:order-2">
                 <div class="flex space-x-4">
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    <a href="#" id="searchBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -107,25 +85,17 @@
                         </svg>
                     </a>
                     <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </a>
-                    <a href="#">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
-                    </a>
                 </div>
                 {{-- mobile view btn --}}
-                <button data-collapse-toggle="mobile-menu-2" type="button"
-                    class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden"
-                    aria-controls="mobile-menu-2" aria-expanded="false" id="ham_menu_btn">
-                    <div class="container ml-1 text-sm text-gray-500 rounded-lg md:hidden" onclick="myFunction(this)">
+                <button class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden">
+                    <div id="open_mobile_nav" class="container ml-1 text-sm text-gray-500 rounded-lg md:hidden"
+                        onclick="myFunction(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
@@ -134,104 +104,69 @@
 
             </div>
             {{-- list items --}}
-            <div class="hidden duration-500 fade-in justify-between items-center w-full md:flex md:w-auto md:order-1"
-                id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium align-middle">
+            <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
+                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-2sm md:font-medium align-middle">
                     <li>
                         <a href="#"
-                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                            class="block leading-tight link-underline link-underline-black py-2 pr-4 pl-3  text-gray-700 md:hover:text-orange-500 md:p-0 dark:text-white"
                             aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+                            class="block leading-tight link-underline link-underline-black py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 ">About</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                            class="block leading-tight link-underline link-underline-black py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 ">Contact</a>
                     </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                </ul>
+            </div>
+            {{-- mobile view --}}
+            <div class="z-30 hidden absolute w-5/6 bg-white items-center border-2 rounded-md" id="list_view"
+                style="left:50%;top:25%;transform: translate(-50%,-50%)">
+                <ul>
+                    <li><a href="#"
+                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">Home</a>
                     </li>
-                    <li>
-                        <a href="#"
-                            class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    <li><a href="#"
+                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">About</a>
+                    </li>
+                    <li><a href="#"
+                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">Pricing</a>
+                    </li>
+                    <li><a href="#"
+                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="gallery_body">
-    {{-- gallery sec --}}
-    <div class="gallery-container wd-3 ht-2">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?nature" alt="nature">
-            </div>
-            <div class="text">nature</div>
-        </div>
+
+{{-- overlay search section --}}
+<div id="overlay">
+    <div id="closingBtn" class="closing_btn text-white text-5xl" style="position: absolute; top:30px; right: 30px;">
+        <ion-icon name="close-outline"></ion-icon>
     </div>
-    <div class="gallery-container wd-3 ht-3">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?girls" alt="nature">
+    <div id="form">
+        <form action="" class="w-full p-20">
+            <div class="relative flex z-0 w-full mb-6 group border-b-2 border-gray-300">
+                <div class="w-full">
+                    <input type="email" name="floating_email" style="width: 100%"
+                        class="text-white block py-2.5 px-0 text-sm bg-transparent border-0  appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" " required />
+                    <label for="floating_email"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+                        address</label>
+                </div>
+                <ion-icon name="search-outline" id="btn_search" class="hover:text-orange-500 duration-500">
+                </ion-icon>
             </div>
-            <div class="text">nature</div>
-        </div>
-    </div>
-    <div class="gallery-container  ht-2">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?house" alt="nature">
-            </div>
-            <div class="text">nature</div>
-        </div>
-    </div>
-    <div class="gallery-container wd-2">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?cars" alt="nature">
-            </div>
-            <div class="text">nature</div>
-        </div>
-    </div>
-    <div class="gallery-container ht-1 wd-4">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?people" alt="nature">
-            </div>
-            <div class="text">nature</div>
-        </div>
-    </div>
-    <div class="gallery-container ">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?nature" alt="nature">
-            </div>
-            <div class="text">nature</div>
-        </div>
-    </div>
-    <div class="gallery-container ht-2">
-        <div class="gallery-item">
-            <div class="image">
-                <img src="https://source.unsplash.com/1600x900/?cars" alt="nature">
-            </div>
-            <div class="text">nature</div>
-        </div>
+        </form>
     </div>
 </div>
 
-
 {{-- js --}}
-<script>
-    $(document).ready(function() {
-        $("#ham_menu_btn").click(function() {
-            $("#mobile-menu-2").show(300);
-        });
-    });
-</script>
 <script>
     function myFunction(x) {
         x.classList.toggle("change");
