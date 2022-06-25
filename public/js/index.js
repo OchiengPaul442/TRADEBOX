@@ -23,4 +23,14 @@ $("#closingBtn,#btn_search").click(function(){
     $("#overlay").removeClass("return_overlay");
     $("#overlay").removeClass("close_overylay");
 });
+
+// fix navbar on scroll down
+// $(window).scroll(function () {
+//     if ($(window).scrollTop() > 100) {
+//         $("#navbar").addClass("navbar-fixed");
+//     } else {
+//         $("#navbar").removeClass("navbar-fixed");
+//     }
+// }, 100);
+
 });

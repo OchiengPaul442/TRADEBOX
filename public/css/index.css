@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
 body,
 html {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
 }
+
+/*add class to fix navbar on scroll down */
+.navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 
 .gallery_body {
     margin: 20px 40px;
@@ -17,8 +30,8 @@ html {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: 100px 300px;
-    grid-gap: 35px;
-    text-align: center;
+    grid-gap: 30px;
+    /* text-align: center; */
     grid-auto-flow: dense;
 }
 
@@ -35,7 +48,7 @@ html {
 }
 
 .gallery-item .image img {
-    width: 90%;
+    width: 85%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
@@ -47,115 +60,23 @@ html {
     transform: scale(1.5);
 }
 
-.item-1 .text {
-    opacity: 0;
+.dec {
     position: absolute;
-    top: 14%;
-    left: 73%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in;
-}
-.item-2 .text {
-    opacity: 0;
-    position: absolute;
-    top: 82%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in;
-}
-
-.item-3 .text {
-    opacity: 0;
-    position: absolute;
-    top: 91%;
-    left: 21%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in;
-}
-
-.item-4 .text {
-    opacity: 0;
-    position: absolute;
-    top: 91%;
-left: 82%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in;
-}
-
-.item-5 .text {
-    opacity: 0;
-    position: absolute;
-    top: 88%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in;
-}
-
-.item-6 .text {
-    opacity: 0;
-    position: absolute;
-    top: 12%;
-    left: 29%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in;
-}
-
-.item-1:hover .text {
-    opacity: 1;
-}
-
-.item-2:hover .text {
-    opacity: 1;
-}
-.item-3:hover .text {
-    opacity: 1;
-}
-.item-4:hover .text {
-    opacity: 1;
-}
-.item-5:hover .text {
-    opacity: 1;
-}
-.item-6:hover .text {
-    opacity: 1;
-}
-
-/* .item-1:hover .text {
-    position: relative;
-    opacity: 1;
-    animation: move-down .3s linear;
-    padding: 1em;
+    top: 0;
+    left: 0;
     width: 100%;
-    -webkit-backdrop-filter: blur(5px) saturate(1.8);
-    backdrop-filter: blur(5px) saturate(1.8);
-} */
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
 
 /* .gallery-item .text {
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -165,16 +86,18 @@ left: 82%;
     pointer-events: none;
     z-index: 4;
     transition: .3s ease-in-out;
-}
-
-.gallery-item:hover .text {
-    opacity: 1;
-    animation: move-down .3s linear;
-    padding: 1em;
-    width: 100%;
     -webkit-backdrop-filter: blur(5px) saturate(1.8);
     backdrop-filter: blur(5px) saturate(1.8);
 } */
+
+.gallery-item:hover .dec {
+    opacity: 1;
+    height: 100%;
+    /* padding: 1em;
+    width: 100%; */
+    /* -webkit-backdrop-filter: blur(5px) saturate(1.8);
+    backdrop-filter: blur(5px) saturate(1.8); */
+}
 
 
 .item-1 {
@@ -285,6 +208,7 @@ left: 82%;
     .wd-7 {
         grid-column: span 1;
     }
+
 }
 
 /* @keyframes move-down {
@@ -406,3 +330,5 @@ left: 82%;
     background-size: 100% 1px;
     background-position: 0 100%
 }
+
+

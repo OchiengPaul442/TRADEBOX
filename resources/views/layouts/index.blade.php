@@ -7,23 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {{-- tailwind css --}}
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    {{-- grid css --}}
+    {{-- index css --}}
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <title>{{ $title }}</title>
 </head>
 
 <body>
-    <div class="">
-        {{-- header --}}
+    <div style="position: relative; min-height: 100vh ;">
+        {{-- header --}};
         <div>
             @include('components.header.main_header.navbar')
         </div>
         {{-- main body --}}
-        <div class="content-section">
+        <div class="content-section relative" style="padding-bottom: 300px;">
             @yield('content')
         </div>
         {{-- footer --}}
-        <div>
+        <div style="position: absolute; bottom: 0;width: 100%;height: auto;">
             @include('components.footers.main_footer.main_footer')
         </div>
     </div>

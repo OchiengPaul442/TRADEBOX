@@ -16,6 +16,9 @@ use App\Http\Controllers\AppController;
 
 // initial pages
  Route::get('/',[AppController::class,'Home'])->name('Home');
+Route::get('About',[AppController::class,'About'])->name('About');
+Route::get('Contact',[AppController::class,'Contact'])->name('Contact');
+Route::get('Auth',[AppController::class,'Auth'])->name('Auth');
 
 
 
