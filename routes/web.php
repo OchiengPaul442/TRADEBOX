@@ -18,7 +18,8 @@ use App\Http\Controllers\AppController;
  Route::get('/',[AppController::class,'Home'])->name('Home');
 Route::get('About',[AppController::class,'About'])->name('About');
 Route::get('Contact',[AppController::class,'Contact'])->name('Contact');
-Route::get('Auth',[AppController::class,'Auth'])->name('Auth');
+Route::get('Products',[AppController::class,'Products'])->name('Products');
+Route::get('Details_on_product',[AppController::class,'Details_on_product'])->name('Details_on_product');
 
 
 

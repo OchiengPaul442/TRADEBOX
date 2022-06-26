@@ -9,26 +9,28 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     {{-- index css --}}
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
     <title>{{ $title }}</title>
 </head>
 
-<body>
+<body style="margin-top: -24px">
     <div style="position: relative; min-height: 100vh ;">
         {{-- header --}};
         <div>
             @include('components.header.main_header.navbar')
         </div>
         {{-- main body --}}
-        <div class="content-section relative" style="padding-bottom: 300px;">
+        <div class="relative" style="padding-bottom: 300px;">
             @yield('content')
         </div>
         {{-- footer --}}
-        <div style="position: absolute; bottom: 0;width: 100%;height: auto;">
+        {{-- <div style="position: absolute; bottom: 0;width: 100%;height: auto;margin-top:-300px;"> --}}
+        <div>
             @include('components.footers.main_footer.main_footer')
         </div>
     </div>
 
+    {{-- modals --}}
+    @include('components.modals.modal')
     {{-- js links --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{ asset('js/index.js') }}"></script>

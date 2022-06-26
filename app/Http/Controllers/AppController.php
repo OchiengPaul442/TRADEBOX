@@ -6,25 +6,26 @@ use Illuminate\Http\Request;
 
 class AppController extends Controller
 {
-    public function index()
-    {
-        return view('layouts.index');
-    }
-
+    // Index paage route
     public function Home(){
         $title = "Home Page";
-        return view('products.Home')->with('title',$title);
+        return view('Pages.Home')->with('title',$title);
     }
-
+    // About page route
     public function About(){
-        return view('about')->with('title','About Page');
+        return view('Pages.about')->with('title','About Page');
     }
-
+    // Contact page route
     public function Contact(){
-        return view('contact')->with('title','Contact Page');
+        return view('Pages.contact')->with('title','Contact Page');
     }
 
-    public function Auth(){
-        return view('auth.auth')->with('title','Auth Page');
+    public function Products(){
+        return view('products.product')->with('title','Products Page');
     }
+
+    public function Details_on_product(){
+        return view('products.detailed_product')->with('title','Details Page');
+    }
+
 }

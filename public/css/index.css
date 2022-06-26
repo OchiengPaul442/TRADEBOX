@@ -14,15 +14,27 @@ html {
     position: relative;
 }
 
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
 /*add class to fix navbar on scroll down */
-.navbar-fixed {
+#navbar.navbar-fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
+    transition: all .5s ease;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 }
 
+.activeTab {
+    color:#cc790f;
+}
 
 .gallery_body {
     margin: 20px 40px;
@@ -75,28 +87,10 @@ html {
     cursor: pointer;
 }
 
-/* .gallery-item .text {
-    opacity: 1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 25px;
-    pointer-events: none;
-    z-index: 4;
-    transition: .3s ease-in-out;
-    -webkit-backdrop-filter: blur(5px) saturate(1.8);
-    backdrop-filter: blur(5px) saturate(1.8);
-} */
 
 .gallery-item:hover .dec {
     opacity: 1;
     height: 100%;
-    /* padding: 1em;
-    width: 100%; */
-    /* -webkit-backdrop-filter: blur(5px) saturate(1.8);
-    backdrop-filter: blur(5px) saturate(1.8); */
 }
 
 
@@ -211,26 +205,7 @@ html {
 
 }
 
-/* @keyframes move-down {
-    0% {
-        top: 10%;
-    }
-
-    50% {
-        top: 35%;
-    }
-
-    100% {
-        top: 50%;
-    }
-} */
-
 /* index main csss section */
-.container {
-    display: inline-block;
-    cursor: pointer;
-}
-
 .bar1,
 .bar2,
 .bar3 {
@@ -326,7 +301,7 @@ html {
     background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(214, 200, 4), rgba(209, 196, 19, 0.986));
 }
 
-.link-underline:hover {
+.activeTab > .link-underline:hover {
     background-size: 100% 1px;
     background-position: 0 100%
 }

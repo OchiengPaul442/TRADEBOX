@@ -53,7 +53,7 @@
     </div>
     <hr>
     {{-- navigation bar --}}
-    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800" id="navbar">
+    <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 relative" id="navbar">
         <div class="flex flex-wrap justify-between items-center mx-auto p-2">
             <div>
                 <a class="toggleColour py-2 text-gray-700 no-underline hover:no-underline font-bold text-xl"
@@ -69,6 +69,7 @@
                     TRADEBOX
                 </a>
             </div>
+            {{-- svg icons --}}
             <div class="flex items-center md:order-2">
                 <div class="flex space-x-4">
                     <a href="#" id="searchBtn">
@@ -78,7 +79,7 @@
                                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                         </svg>
                     </a>
-                    <a href="{{ route('Auth') }}">
+                    <a href="#" id="Acc_btn" data-bs-toggle="modal" type="button" data-bs-target="#exampleModalCenteredScrollable">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
                                 clip-rule="evenodd" />
@@ -105,34 +106,37 @@
             </div>
             {{-- list items --}}
             <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-2sm md:font-medium align-middle">
+                <ul
+                    class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-2sm md:font-medium align-middle text-xl">
                     <li>
-                        <a href="{{route('Home')}}"
-                            class="block leading-tight link-underline link-underline-black py-2 pr-4 pl-3  text-gray-700 md:hover:text-orange-500 md:p-0 dark:text-white"
+                        <a href="{{ route('Home') }}"
+                            class="{{ Request::is('/') ? 'activeTab' : '' }} block leading-tight link-underline link-underline-black py-2 pr-4 pl-3  text-gray-700 md:hover:text-orange-500 md:p-0 dark:text-white"
                             aria-current="page">Home</a>
                     </li>
                     <li>
-                        <a href="{{route('About')}}"
-                            class="block leading-tight link-underline link-underline-black py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 ">About</a>
+                        <a href="{{ route('About') }}"
+                            class="{{ Request::is('About') ? 'activeTab' : '' }} block leading-tight link-underline link-underline-black py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 ">About</a>
                     </li>
                     <li>
-                        <a href="{{route('Contact')}}"
-                            class="block leading-tight link-underline link-underline-black py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 ">Contact</a>
+                        <a href="{{ route('Contact') }}"
+                            class="{{ Request::is('Contact') ? 'activeTab' : '' }} block leading-tight link-underline link-underline-black py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-orange-500 md:p-0 ">Contact</a>
                     </li>
                 </ul>
             </div>
             {{-- mobile view --}}
-            <div class="z-30 hidden absolute w-5/6 bg-white items-center border-2 rounded-md" id="list_view"
-                style="left:50%;top:25%;transform: translate(-50%,-50%)">
+            <div class="z-30 hidden top-16 w-4/5 right-5 absolute bg-white items-center border-2 rounded-md text-xl" id="list_view"
+                >
                 <ul>
-                    <li><a href="{{route('Home')}}"
-                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">Home</a>
+                    {{-- keep list item active when clicked --}}
+
+                    <li><a href="{{ route('Home') }}"
+                            class="{{ Request::is('/') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">Home</a>
                     </li>
-                    <li><a href="{{route('About')}}"
-                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">About</a>
+                    <li><a href="{{ route('About') }}"
+                            class="{{ Request::is('About') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">About</a>
                     </li>
-                    <li><a href="{{route('Contact')}}"
-                            class="block py-3 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-50">Contact</a>
+                    <li><a href="{{ route('Contact') }}"
+                            class="{{ Request::is('Contact') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">Contact</a>
                     </li>
                 </ul>
             </div>
