@@ -8,7 +8,7 @@
             <div class="w-80 h-1 bg-gray-500 right-0 my-10"></div>
         </div>
     </div>
-    <div class="container mx-auto">
+    <div class="mx-auto">
         <div class="row">
             <div class="gallery_body" id="desktop_view">
                 {{-- item 1 --}}
