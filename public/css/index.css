@@ -348,8 +348,6 @@ html {
     transform: translateY(150px);
     opacity: 0;
     transition: .4s all ease;
-    /* delay */
-    transition-delay: 0.3s;
 }
 
 .rev_2 {
