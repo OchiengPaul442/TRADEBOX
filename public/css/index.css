@@ -347,7 +347,7 @@ html {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 1s all ease;
+    transition: .4s all ease;
     /* delay */
     transition-delay: 0.3s;
 }
