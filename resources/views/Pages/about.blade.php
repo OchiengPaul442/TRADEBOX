@@ -10,7 +10,7 @@
     <div class="container mx-auto mb-40">
         <div class="row space-y-32">
             {{-- banner --}}
-            <div class="banner-container grid lg:grid-cols-2 gap-10 p-5  h-auto w-full items-center mt-6">
+            <div class="banner-container grid lg:grid-cols-2 gap-12 p-5  h-auto w-full items-center mt-6">
                 <div class="banner-content w-full space-y-2">
                     <h4 class="text-xl">About Us</h4>
                     <h1 class="text-4xl font-bold">Hello world we are TradeBox</h1>
@@ -25,14 +25,20 @@
                     }" alt="about_img">
                 </div>
             </div>
+        {{-- design line --}}
+            <div class="flex justify-center top-16 relative">
+                <div class="h-2 w-1/3 bg-black rounded-md"></div>
+            </div>
             {{-- about section content --}}
-            <div class="grid lg:grid-cols-2 gap-10 items-center">
-                <div class="w-full justify-center flex">
+            <div class="grid lg:grid-cols-2 gap-10 items-center reveal">
+                <div class="w-full justify-center flex ">
                     <img src="{{ asset('img/about3.png') }}" style="width: 79%" alt="story">
                 </div>
-                <div class="w-full p-4">
-                    <h1 class="text-2xl">TradeBox Story</h1>
-                    <label class="text-3xl font-bold">The first Shopify store was our own</label>
+                <div class="w-full p-4 about_sections">
+                    <div>
+                        <h1 class="text-2xl">TradeBox Story</h1>
+                        <label class="text-3xl font-bold">The first Shopify store was our own</label>
+                    </div>
                     <p class="text-xl text-slate-500">
                         Over a decade ago, we started a store to sell snowboards online. None of the ecommerce solutions at
                         the
@@ -43,7 +49,7 @@
                     </p>
                 </div>
             </div>
-            <div class="w-full text-center space-y-2 p-4">
+            <div class="w-full text-center space-y-2 p-4 reveal">
                 <span class="text-2xl">Our Mission</span>
                 <h1 class="text-3xl font-bold">Making commerce better for everyone</h1>
                 <p class="text-slate-500 text-xl">We help people achieve independence by making it easier to start, run, and
@@ -54,12 +60,14 @@
                     commerce
                     better for everyone.</p>
             </div>
-            <div class="grid lg:grid-cols-2 gap-10 items-center p-4">
-                <div class="">
-                    <span class="text-2xl">Our People</span>
-                    <h1 class="text-3xl font-bold">
-                        Creating a community for impact
-                    </h1>
+            <div class="grid lg:grid-cols-2 gap-10 items-center p-4 reveal">
+                <div class="about_sections">
+                    <div>
+                        <span class="text-2xl">Our People</span>
+                        <h1 class="text-3xl font-bold">
+                            Creating a community for impact
+                        </h1>
+                    </div>
                     <p class="text-xl text-slate-500">
                         Shopify has grown from 5 people in a coffee shop to over 10,000 across the globe. With millions of
                         businesses powered by Shopify, we care deeply about the work we do. We’re constant learners who
@@ -72,13 +80,15 @@
                     <img src="{{ asset('img/about4.jpg') }}" class="rounded-3xl" style="width: 80%;" alt="people">
                 </div>
             </div>
-            <div class="grid lg:grid-cols-2 gap-10 items-center p-4">
-                <div class="">
-                    <span class="text-2xl">OUR COMMITMENT TO SUSTAINABILITY
-                    </span>
-                    <h1 class="text-3xl font-bold">
-                        We’re building a 100-year company
-                    </h1>
+            <div class="grid lg:grid-cols-2 gap-10 items-center p-4 reveal">
+                <div class="about_sections">
+                    <div>
+                        <span class="text-2xl">OUR COMMITMENT TO SUSTAINABILITY
+                        </span>
+                        <h1 class="text-3xl font-bold">
+                            We’re building a 100-year company
+                        </h1>
+                    </div>
                     <p class="text-xl text-slate-500">
                         Shopify builds for the long term, and that means investing in our planet, our communities, and our
                         people.Our Sustainability Fund and Social Impact initiatives include choosing renewable energy,
@@ -92,8 +102,8 @@
                     <img src="{{ asset('img/about2.jpg') }}" class="rounded-3xl" style="width: 80%;" alt="community">
                 </div>
             </div>
-            <div class="text-center flex flex-col justify-center p-4">
-                <p class="text-3xl font-bold text-slate-500">Try Shopify for free, and explore all the tools and services
+            <div class="text-center flex flex-col justify-center p-4 free_sign_up_sec reveal">
+                <p class="text-3xl font-bold text-slate-500 ">Try Shopify for free, and explore all the tools and services
                     you <br>need to start, run, and grow your business.
                 </p>
                 <div class="mt-4">

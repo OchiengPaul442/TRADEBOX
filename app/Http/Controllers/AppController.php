@@ -20,12 +20,19 @@ class AppController extends Controller
         return view('Pages.contact')->with('title','Contact Page');
     }
 
+    // products page route
     public function Products(){
         return view('products.product')->with('title','Products Page');
     }
 
+    // details page route
     public function Details_on_product(){
         return view('products.detailed_product')->with('title','Details Page');
+    }
+
+    //add product page route
+    public function Add_product(){
+        return view('products.add_product')->with('title','Add Product');
     }
 
 }

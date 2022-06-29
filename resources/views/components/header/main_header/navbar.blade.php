@@ -1,7 +1,7 @@
 {{-- header with navbar --}}
-<header>
+<header class="relative">
     {{-- contact section --}}
-    <div class="flex justify-between w-full m p-3">
+    <div class="flex justify-between w-full p-3">
         <div class="flex justify-between">
             <div class="bg-slate-300" style="margin:2px 5px;width:2px;height: 17px;"></div>
             <p class="text-slate-700"><span class="text-slate-400">Call Us </span>(234) 722333788</p>
@@ -92,6 +92,9 @@
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </a>
+                    {{-- <a href="#" class="w-10 h-10 rounded-full bg-orange-600">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </a> --}}
                 </div>
                 {{-- mobile view btn --}}
                 <button class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden">

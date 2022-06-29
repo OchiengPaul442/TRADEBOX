@@ -20,6 +20,7 @@ Route::get('About',[AppController::class,'About'])->name('About');
 Route::get('Contact',[AppController::class,'Contact'])->name('Contact');
 Route::get('Products',[AppController::class,'Products'])->name('Products');
 Route::get('Details_on_product',[AppController::class,'Details_on_product'])->name('Details_on_product');
+Route::get('Add_product',[AppController::class,'Add_product'])->name('Add_product');
 
 
 

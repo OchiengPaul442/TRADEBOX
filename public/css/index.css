@@ -14,11 +14,115 @@ html {
     position: relative;
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
     height: auto;
+}
+
+
+/* hover over links for underlin effect on navbar */
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(214, 200, 4), rgba(209, 196, 19, 0.986));
+}
+
+.activeTab>.link-underline:hover {
+    background-size: 100% 1px;
+    background-position: 0 100%
+}
+
+/* search box section */
+
+/* index main csss section */
+.bar1,
+.bar2,
+.bar3 {
+    width: 28px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+/* overlay section */
+#overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    display: none;
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+    transform: translateX(2000px);
+    transition: all .8s ease-in-out;
+}
+
+#overlay.return_overlay {
+    transform: translateX(0);
+    transition: all .8s ease-in-out;
+}
+
+#overlay.close_overylay {
+    transform: translateX(2000);
+    display: none;
+    transition: all .8s ease-in-out;
+}
+
+#form {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.closing_btn {
+    transition: all .2s;
+}
+
+.closing_btn:hover {
+    transform: rotate(125deg);
 }
 
 /*add class to fix navbar on scroll down */
@@ -33,7 +137,7 @@ html {
 }
 
 .activeTab {
-    color:#cc790f;
+    color: #cc790f;
 }
 
 .gallery_body {
@@ -184,9 +288,104 @@ html {
     grid-row: span 8;
 }
 
-/* animate css grid */
+
+/* about section */
+.about_sections {
+    text-align: left;
+}
+
+/* home page view */
+/* desktop view */
+#small_view {
+    display: none;
+}
+
+/* mobile view */
+@media screen and (max-width: 768px) {
+    #large_view {
+        display: none;
+    }
+
+    #small_view {
+        display: block;
+        margin: 20px 40px;
+    }
+
+    .sec_titles {
+        text-align: center;
+    }
+
+    .about_sections,
+    .banner-content {
+        text-align: center;
+    }
+
+    .banner-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .free_sign_up_sec p {
+        font-size: 22px;
+    }
+}
+
+/* css scroll effect */
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.rev_1 {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+    /* delay */
+    transition-delay: 0.5s;
+}
+
+.rev_2 {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+    /* delay */
+    transition-delay: 1s;
+}
+
+.rev_3 {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+    /* delay */
+    transition-delay: 1.5s;
+}
+
+.reveal2.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@media screen and (max-width:992px) {
+
+    .about_sections,
+    .banner-content {
+        text-align: center;
+    }
 
 
+}
+
+/* tiles on home page */
 @media screen and (max-width:850px) {
     .gallery_body {
         grid-template-columns: repeat(1, 1fr);
@@ -204,106 +403,3 @@ html {
     }
 
 }
-
-/* index main csss section */
-.bar1,
-.bar2,
-.bar3 {
-    width: 28px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-/* Rotate first bar */
-.change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-/* Fade out the second bar */
-.change .bar2 {
-    opacity: 0;
-}
-
-/* Rotate last bar */
-.change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-6px, -8px);
-}
-
-/* overlay section */
-#overlay {
-    position: fixed;
-    /* Sit on top of the page content */
-    display: none;
-    /* Hidden by default */
-    width: 100%;
-    /* Full width (cover the whole page) */
-    height: 100%;
-    /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Black background with opacity */
-    z-index: 2;
-    /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer;
-    /* Add a pointer on hover */
-    transform: translateX(2000px);
-    transition: all .8s ease-in-out;
-}
-
-#overlay.return_overlay {
-    transform: translateX(0);
-    transition: all .8s ease-in-out;
-}
-
-#overlay.close_overylay {
-    transform: translateX(2000);
-    display: none;
-    transition: all .8s ease-in-out;
-}
-
-#form {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    color: white;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-}
-
-.closing_btn {
-    transition: all .2s;
-}
-
-.closing_btn:hover {
-    transform: rotate(125deg);
-}
-
-/* hover over links for underlin effect */
-.link-underline {
-    border-bottom-width: 0;
-    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-    background-size: 0 1px;
-    background-position: 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size .5s ease-in-out;
-}
-
-.link-underline-black {
-    background-image: linear-gradient(transparent, transparent), linear-gradient(rgb(214, 200, 4), rgba(209, 196, 19, 0.986));
-}
-
-.activeTab > .link-underline:hover {
-    background-size: 100% 1px;
-    background-position: 0 100%
-}
-
-
