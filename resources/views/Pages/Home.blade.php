@@ -181,7 +181,7 @@
             </div>
             {{-- Mobile view --}}
             <div class="place-content-center space-y-8" id="small_view">
-                <div class="flex justify-center reveal2 rev_1">
+                <div class="flex justify-center reveal2">
                     <div class="rounded-lg shadow-lg bg-white max-w-sm">
                       <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
                         <img class="rounded-t-lg" src="{{ asset('img/chair.jpg') }}" alt="chair"/>
