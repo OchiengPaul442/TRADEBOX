@@ -347,7 +347,9 @@ html {
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: .3s;
+    transition: .5s ease;
+    transition-delay: .1s;
+
 }
 
 .rev_2 {

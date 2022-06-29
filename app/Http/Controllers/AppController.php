@@ -7,10 +7,16 @@ use Illuminate\Http\Request;
 class AppController extends Controller
 {
     // Index paage route
+    // public function Index(){
+    //     return view('index');
+    // }
+
+    // home page route
     public function Home(){
         $title = "Home Page";
         return view('Pages.Home')->with('title',$title);
     }
+
     // About page route
     public function About(){
         return view('Pages.about')->with('title','About Page');

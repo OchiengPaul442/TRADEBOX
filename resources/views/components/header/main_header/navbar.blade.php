@@ -130,7 +130,7 @@
                     {{-- keep list item active when clicked --}}
 
                     <li><a href="{{ route('Home') }}"
-                            class="{{ Request::is('/') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">Home</a>
+                            class="{{ Request::is('Home') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">Home</a>
                     </li>
                     <li><a href="{{ route('About') }}"
                             class="{{ Request::is('About') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">About</a>

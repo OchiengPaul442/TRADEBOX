@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('index')
 
 @section('content')
     <div class="space-y-10 mb-40">
