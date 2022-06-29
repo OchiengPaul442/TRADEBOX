@@ -349,7 +349,7 @@ html {
     opacity: 0;
     transition: 1s all ease;
     /* delay */
-    transition-delay: 0.5s;
+    transition-delay: 0.3s;
 }
 
 .rev_2 {
@@ -358,7 +358,7 @@ html {
     opacity: 0;
     transition: 1s all ease;
     /* delay */
-    transition-delay: 1s;
+    transition-delay: .8s;
 }
 
 .rev_3 {
@@ -367,7 +367,7 @@ html {
     opacity: 0;
     transition: 1s all ease;
     /* delay */
-    transition-delay: 1.5s;
+    transition-delay: 1.3s;
 }
 
 .reveal2.active {
