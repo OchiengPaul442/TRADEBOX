@@ -17,6 +17,8 @@
         {{-- header --}};
         <div class="mb-6">
             @include('components.header.main_header.navbar')
+            {{-- search overlay --}}
+            @include('components.search_area.search')
         </div>
         {{-- main body --}}
         <div class="relative" style="padding-bottom: 300px;">
