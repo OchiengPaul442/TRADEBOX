@@ -15,7 +15,7 @@
 <body style="margin-top: -24px">
     <div style="position: relative; min-height: 100vh ;">
         {{-- header --}};
-        <div class="mb-10">
+        <div>
             @include('components.header.main_header.navbar')
         </div>
         {{-- main body --}}
