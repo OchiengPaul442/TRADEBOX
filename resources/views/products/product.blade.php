@@ -262,4 +262,5 @@
             {{-- end of product card --}}
         </div>
     </div>
+    <div style="width: 100%;height:200px;"></div>
 @endsection
