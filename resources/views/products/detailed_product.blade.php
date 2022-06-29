@@ -105,10 +105,15 @@
                             </button>
                         </div>
                     </div>
-                    <div class="flex">
+                    <div class="flex flex-col space-y-8">
                         <button
                             class="w-full text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Contact
                             Now</button>
+                            <div class="w-full grid grid-cols-3 gap-6">
+                               <img src="https://www.whitmorerarebooks.com/pictures/medium/2465.jpg" width="85%" class="p-2 object-cover object-center rounded border border-gray-200" alt="">
+                               <img src="https://www.whitmorerarebooks.com/pictures/medium/2465.jpg" width="85%" class="p-2 object-cover object-center rounded border border-gray-200" alt="">
+                               <img src="https://www.whitmorerarebooks.com/pictures/medium/2465.jpg" width="85%" class="p-2 object-cover object-center rounded border border-gray-200" alt="">
+                            </div>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,10 @@
 @extends('index')
 
 @section('content')
-    <div class="flex justify-center">
-        <h1 class="text-4xl font-bold p-10">Computers</h1>
-    </div>
+   {{-- title --}}
+<div class="container mx-auto mb-4">
+    <h1 class="text-4xl font-bold text-orange-700 p-2">Computers</h1>
+</div>
     <div class="container mx-auto">
         <div class="row place-content-center grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-8">
             {{-- product card --}}
