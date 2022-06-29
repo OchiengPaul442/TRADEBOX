@@ -92,6 +92,9 @@
                                 d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                     </a>
+                    <a href="{{ route('Add_product') }}" id="add_product_btn_nav" class="{{ !Request::is('/') ? '' : 'hidden' }} px-2 py-2 relative bottom-2 bg-orange-500 text-white hover:bg-orange-700 duration-500 ">
+                        Add Product
+                    </a>
                 </div>
                 {{-- mobile view btn --}}
                 <button class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden">
@@ -137,6 +140,11 @@
                     </li>
                     <li><a href="{{ route('Contact') }}"
                             class="{{ Request::is('Contact') ? 'activeTab' : '' }} block py-4 border-b pr-2 pl-2 text-gray-700 border-gray-100 hover:bg-gray-100">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('Add_product') }}" class="{{ !Request::is('/') ? '' : 'hidden' }} block bg-orange-500 py-4 border-b pr-2 pl-2 text-white border-orange-100 hover:bg-orange-700 ">
+                            Add Product
+                        </a>
                     </li>
                 </ul>
             </div>

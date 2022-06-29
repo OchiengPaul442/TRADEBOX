@@ -302,6 +302,9 @@ html {
 
 /* mobile view */
 @media screen and (max-width: 768px) {
+    #add_product_btn_nav{
+        display: none;
+    }
     #large_view {
         display: none;
     }
