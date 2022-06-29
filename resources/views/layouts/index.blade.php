@@ -12,7 +12,7 @@
     <title>{{ $title }}</title>
 </head>
 
-<body style="margin-top: -24px">
+<body style="margin-top: -24px;">
     <div style="position: relative; min-height: 100vh ;">
         {{-- header --}};
         <div class="mb-6">
