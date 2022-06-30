@@ -33,7 +33,7 @@
                             <P class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis in
                                 commodi
                                 quis maxime modi voluptatem atque ex obcaecati dicta sint.</P>
-                            <a href="#">
+                            <a href="{{route('Products')}}">
                                 <button
                                     class="mt-2 inline-block px-6 py-2.5 bg-orange-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-500 hover:shadow-lg focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Trade
                                     Now</button>
@@ -58,7 +58,7 @@
                             <P class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis in
                                 commodi
                                 quis maxime modi voluptatem atque ex obcaecati dicta sint.</P>
-                            <a href="#">
+                            <a href="{{route('Products')}}">
                                 <button
                                     class="mt-2 inline-block px-6 py-2.5 bg-orange-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-500 hover:shadow-lg focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Trade
                                     Now</button>
@@ -106,7 +106,7 @@
                             <P class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis in
                                 commodi
                                 quis maxime modi voluptatem atque ex obcaecati dicta sint.</P>
-                            <a href="#">
+                            <a href="{{route('Products')}}">
                                 <button
                                     class="mt-2 inline-block px-6 py-2.5 bg-orange-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-500 hover:shadow-lg focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Trade
                                     Now</button>
@@ -129,7 +129,7 @@
                             <P class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis in
                                 commodi
                                 quis maxime modi voluptatem atque ex obcaecati dicta sint.</P>
-                            <a href="#">
+                            <a href="{{route('Products')}}">
                                 <button
                                     class="mt-2 inline-block px-6 py-2.5 bg-orange-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-500 hover:shadow-lg focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Trade
                                     Now</button>
@@ -152,7 +152,7 @@
                             <P class="p-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis reiciendis in
                                 commodi
                                 quis maxime modi voluptatem atque ex obcaecati dicta sint.</P>
-                            <a href="#">
+                            <a href="{{route('Products')}}">
                                 <button
                                     class="mt-2 inline-block px-6 py-2.5 bg-orange-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-500 hover:shadow-lg focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Trade
                                     Now</button>
@@ -169,7 +169,7 @@
                         </div>
                         {{-- centered button --}}
                         <div class="flex justify-start text-2xl bg-slate-700 font-bold text-white p-4">
-                            <a href="#">
+                            <a href="{{route('Add_product')}}">
                                 <button
                                     class="hover:scale-105 duration-500 inline-block px-6 py-2.5 bg-orange-500 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-500 hover:shadow-lg focus:bg-orange-500 focus:shadow-lg focus:outline-none focus:ring-0  active:shadow-lg transition  ease-in-out">Add
                                     Product</button>
