@@ -87,7 +87,7 @@ html {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     /* Black background with opacity */
-    z-index: 2;
+    z-index: 10000;
     /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer;
     /* Add a pointer on hover */
@@ -300,8 +300,18 @@ html {
     display: none;
 }
 
+#reveal_category_box{
+    display: none;
+}
+
 /* mobile view */
 @media screen and (max-width: 768px) {
+    #reveal_category_box{
+        display: block;
+    }
+    .sidebar_categories{
+        display: none;
+    }
     #add_product_btn_nav{
         display: none;
     }
@@ -330,6 +340,15 @@ html {
 
     .free_sign_up_sec p {
         font-size: 22px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .sidebar_categories{
+        display: none;
+    }
+    #reveal_category_box{
+        display: block;
     }
 }
 
@@ -379,10 +398,16 @@ html {
 }
 
 @media screen and (max-width:992px) {
-
+    #reveal_category_box{
+        display: block;
+    }
     .about_sections,
     .banner-content {
         text-align: center;
+    }
+
+    .sidebar_categories{
+        display: none;
     }
 
 

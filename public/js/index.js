@@ -7,10 +7,15 @@ $(document).ready(function (e) {
     //hide element
     $(document).mouseup(function (e) {
         var container = $("#list_view");
+        var container2 = $("#category_box");
         // If the target of the click isn't the container
         if (!container.is(e.target) && container.has(e.target).length === 0) {
             container.hide(300);
             $("#open_mobile_nav").removeClass("change");
+        }
+        // hide and show category box in product page
+        if (!container2.is(e.target) && container2.has(e.target).length === 0) {
+            container2.hide(300);
         }
     });
 
@@ -63,18 +68,14 @@ $(document).ready(function (e) {
         var scroll = $(this).scrollTop();
         // var topDist = $("#container").position();
         if (scroll > 100) {
-            $('#navbar').addClass("navbar-fixed");
+            $('#navbar').addClass("navbar-fixed", 300);
         } else {
-            $('#navbar').removeClass("navbar-fixed");
+            $('#navbar').removeClass("navbar-fixed", 300);
         }
     });
 
-
-    // $(window).scroll(function () {
-    //     if ($(window).scrollTop() > 100) {
-    //         $("#navbar").addClass("navbar-fixed");
-    //     } else {
-    //         $("#navbar").removeClass("navbar-fixed");
-    //     }
-    // }, 100);
+    // showing the sidebar category box in mobile view
+    $("#reveal_category_box").click(function () {
+        $("#category_box").toggle(300);
+    })
 });

@@ -1,5 +1,5 @@
 {{-- header with navbar --}}
-<header class="relative">
+<header class="relative z-50">
     {{-- contact section --}}
     <div class="flex justify-between w-full p-3">
         <div class="flex justify-between">
